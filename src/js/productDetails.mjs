@@ -12,6 +12,8 @@ function addProductToCart(product) {
   cartItems.push(product);
   console.log("Added cartItems:", cartItems);
   setLocalStorage("so-cart", cartItems);
+  let cart = document.querySelector(".cart");
+  cart.classList.add("cart--actived");
 }
 
 function renderProductDetails(product) {
