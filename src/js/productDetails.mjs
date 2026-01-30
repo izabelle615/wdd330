@@ -14,6 +14,10 @@ function addProductToCart(product) {
   setLocalStorage("so-cart", cartItems);
   let cart = document.querySelector(".cart");
   cart.classList.add("cart--actived");
+  cart.classList.add("animate-bounce");
+  addEventListener("animationend", () => {
+      cart.classList.remove("animate-bounce");
+  }, { once: true });
 }
 
 function renderProductDetails(product) {
