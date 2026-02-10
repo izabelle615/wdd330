@@ -14,4 +14,5 @@ renderAlerts().then((alerts) => {
 });
 
 // Render top products list
-productList(".product-list", "tents");
+const searchTerm = new URLSearchParams(window.location.search).get("search");
+productList(".product-list", "tents", searchTerm);
